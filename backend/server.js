@@ -13,7 +13,9 @@ app.get('/characters', (req, res) => {
           return
         }
         let characters = JSON.parse(data);
-        res.json(characters);
+        setTimeout(() => {
+            res.json(characters);
+        }, 3000)
       })
   })
 

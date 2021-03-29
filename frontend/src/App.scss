@@ -37,4 +37,18 @@ h1 {
             }
         }
     }
+    .loading {
+        position: fixed;
+        top: 40%;
+        animation: moving 1s infinite;
+        img {
+            width: 250px;
+        }
+    }
+}
+
+@keyframes moving {
+    0% {top: 30%}
+    50% {top: 35%}
+    100% {top: 30%}
 }
