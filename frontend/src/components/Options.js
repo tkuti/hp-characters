@@ -5,10 +5,11 @@ function Options({listFilter}) {
     const [houseSelectValue, setHouseSelectValue] = useState("all")
     const [roleSelectValue, setRoleSelectValue] = useState("all")
     const [genderSelectValue, setGenderSelectValue] = useState("all")
+    const [searchInputValue, setSearchInputValue] = useState("")
     
     useEffect(() => {
-        listFilter(houseSelectValue, roleSelectValue, genderSelectValue)
-    }, [houseSelectValue, roleSelectValue, genderSelectValue])
+        listFilter(houseSelectValue, roleSelectValue, genderSelectValue, searchInputValue)
+    }, [houseSelectValue, roleSelectValue, genderSelectValue, searchInputValue])
 
     return (
         <div className="filter">
@@ -38,6 +39,11 @@ function Options({listFilter}) {
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                 </select>
+            </div>
+            <div className="search-container">
+                <input type="text" placeholder="Type for searching.."
+                onInput={(e) => setSearchInputValue(e.target.value)} />
+                <i class="fas fa-search"></i>
             </div>
         </div>
     )

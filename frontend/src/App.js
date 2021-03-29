@@ -21,7 +21,7 @@ function App() {
       })
   }, [])
 
-  const listFilter = (houseSelectValue, roleSelectValue, genderSelectValue) => {
+  const listFilter = (houseSelectValue, roleSelectValue, genderSelectValue, searchInputValue) => {
     let filteredList = characters;
     houseSelectValue !== "all"
       && (filteredList = filteredList.filter(char => char.house === houseSelectValue))
@@ -34,6 +34,8 @@ function App() {
       }))
     genderSelectValue !== "all"
       && (filteredList = filteredList.filter(char => char.gender === genderSelectValue))
+    searchInputValue !== ""
+      && (filteredList = filteredList.filter(char => char.name.toLowerCase().includes(searchInputValue.toLowerCase())))
     setDisplayList(filteredList);
   }
 

@@ -45,12 +45,23 @@ nav {
     label {
       font-size: 1.6rem;
       color: $primary-color;
+      text-shadow: 5px 5px 5px black;
     }
-    select {
+    select,
+    input {
       font-size: 1.3rem;
       border-radius: 5px;
       font-family: "Trade Winds", cursive;
       background-color: wheat;
+    }
+  }
+  .search-container {
+    position: relative;
+    i {
+      color: black;
+      position: absolute;
+      right: 40px;
+      top: 30%;
     }
   }
 }
@@ -61,6 +72,7 @@ nav {
   justify-content: center;
   gap: 50px;
   z-index: 10;
+  margin-bottom: 30px;
   .card {
     width: 300px;
     border: 2px solid $primary-color;
@@ -78,6 +90,11 @@ nav {
     }
     h2 {
       color: $primary-color;
+      text-shadow: 5px 5px 5px black;
+    }
+    p {
+        color: wheat;
+        text-shadow: 5px 5px 5px black;
     }
     button {
       background-color: rgba(0, 0, 0, 0);
@@ -87,6 +104,7 @@ nav {
       padding: 5px 20px;
       border-radius: 10px;
       border: 1px solid $primary-color;
+      text-shadow: 5px 5px 5px black;
       &:hover {
         cursor: pointer;
         transform: scale(1.05);
@@ -117,6 +135,7 @@ nav {
           margin-top: 0;
           text-align: center;
           color: $primary-color;
+          text-shadow: 5px 5px 5px black;
         }
         img {
           width: 100%;
@@ -130,6 +149,7 @@ nav {
         .detail-text {
           font-size: 1.2rem;
           margin: 0.5rem;
+          text-shadow: 5px 5px 5px black;
           ul {
             list-style-type: square;
           }
