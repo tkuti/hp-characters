@@ -5,15 +5,12 @@ function Character({ character }) {
 
     const [showDetails, setShowDetails] = useState(false)
 
-
-
     return (
         <>
             <div className="card">
                 <h2>{character.name}</h2>
                 <div className="img">
                     <img src={character.image} alt="character" />
-
                 </div>
                 <p>role: {character.hogwartsStudent ? "student"
                     : character.hogwartsStaff ? "staff" : "other"}</p>

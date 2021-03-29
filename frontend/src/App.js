@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Character from './components/Character'
 import LoadingMask from './components/LoadingMask'
 import Options from './components/Options'
+import logo from './image/logo.png'
 
 function App() {
 
@@ -32,14 +33,17 @@ function App() {
         return false
       }))
     genderSelectValue !== "all"
-    && (filteredList = filteredList.filter(char => char.gender === genderSelectValue))
+      && (filteredList = filteredList.filter(char => char.gender === genderSelectValue))
     setDisplayList(filteredList);
   }
 
   return (
     <div className="content">
       <div className="background"></div>
-      <h1>Harry Potter Characters</h1>
+      <nav>
+        <img src={logo} alt="logo" />
+        <h1>Harry Potter Characters</h1>
+      </nav>
       {
         isLoading ? <LoadingMask />
           : <>
