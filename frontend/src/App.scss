@@ -23,6 +23,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
+    z-index: 10;
     .card {
         width: 300px;
         border: 2px solid wheat;
@@ -37,6 +38,40 @@ h1 {
             }
         }
     }
+    .details-background {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(1, 1, 1, .95);
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .details-container {
+            display: flex;
+            border: 1px solid wheat;
+            background-color: #111111;
+            padding: 30px;
+            .details-img {
+                width: 300px;
+                height: 400px;
+                .name {
+                    font-size: 2.5rem;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            .details {
+                padding: 30px;
+                .detail-text {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
     .loading {
         position: fixed;
         top: 40%;
@@ -46,6 +81,8 @@ h1 {
         }
     }
 }
+
+
 
 @keyframes moving {
     0% {top: 30%}
