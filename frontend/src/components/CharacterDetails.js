@@ -16,7 +16,7 @@ function CharacterDetails({ character, setShowDetails }) {
                     {character.house && <p className="detail-text">house: {character.house}</p>}
                     {character.yearOfBirth && <p className="detail-text">birth year: {character.yearOfBirth}</p>}
                     {character.ancestry && <p className="detail-text">ancestry: {character.ancestry}</p>}
-                    {character.wand && <p className="detail-text">wand:
+                    {character.wand.wood && <p className="detail-text">wand:
                     <ul>
                             <li>wood: {character.wand.wood}</li>
                             <li>core: {character.wand.core}</li>
