@@ -6,6 +6,7 @@ body {
   margin: 0;
   color: wheat;
   font-family: "Trade Winds", cursive;
+  font-size: 16px;
 }
 
 .background {
@@ -40,8 +41,10 @@ nav {
   margin: 130px 0 50px 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   div {
-    padding: 0 30px;
+    padding: 10px 30px;
     label {
       font-size: 1.6rem;
       color: $primary-color;
@@ -93,8 +96,8 @@ nav {
       text-shadow: 5px 5px 5px black;
     }
     p {
-        color: wheat;
-        text-shadow: 5px 5px 5px black;
+      color: wheat;
+      text-shadow: 5px 5px 5px black;
     }
     button {
       background-color: rgba(0, 0, 0, 0);
@@ -179,5 +182,62 @@ nav {
   }
   100% {
     top: 30%;
+  }
+}
+
+@media (max-width: 400px) {
+  body,
+  html {
+    font-size: 13px;
+  }
+  nav {
+    justify-content: space-between;
+    h1 {
+      text-align: center;
+    }
+  }
+  .cards {
+    .card {
+      .img {
+        height: 300px;
+        width: auto;
+      }
+    }
+    .details-background {
+      min-height: 100vh;
+      height: auto;
+      .details-container {
+        flex-wrap: wrap;
+        padding: 10px;
+        justify-content: center;
+        .details {
+          padding: 5px;
+          font-size: 12px;
+          .detail-text {
+            margin: 0;
+            ul {
+              margin: 0;
+            }
+          }
+        }
+        .details-img {
+          width: 150px;
+          img {
+            width: 100%;
+          }
+          .name {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .loading {
+    left: 25%;
+    img {
+      width: 150px;
+    }
+
   }
 }

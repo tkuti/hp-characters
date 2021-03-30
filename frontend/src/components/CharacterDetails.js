@@ -6,7 +6,7 @@ function CharacterDetails({ character, setShowDetails }) {
             <div className="details-container">
                 <div className="details-img">
                     <p className="name">{character.name}</p>
-                    <img src={character.image} alt="character"/>
+                    <img src={character.image} alt="character" />
                 </div>
                 <div className="details">
                     <p className="detail-text">species: {character.species}</p>
